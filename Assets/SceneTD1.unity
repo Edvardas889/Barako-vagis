@@ -495,6 +495,7 @@ GameObject:
   - 212: {fileID: 922363355}
   - 58: {fileID: 922363354}
   - 50: {fileID: 922363353}
+  - 114: {fileID: 922363357}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -580,6 +581,21 @@ Transform:
   - {fileID: 1537826953}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &922363357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922363352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1805c8bb9afca41843524b2843d048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetA: {fileID: 1765519278}
+  targetB: {fileID: 154072251}
+  currentTarget: {fileID: 0}
+  speed: 5
 --- !u!1 &1071429147
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +898,7 @@ GameObject:
   - 58: {fileID: 1378101124}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
