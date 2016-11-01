@@ -7,6 +7,7 @@ public class EnemyMovementScript : MonoBehaviour {
     public Transform targetB;
     public Transform currentTarget;
     public float speed;
+    public float rotationSpeed;
     void Update()
     {
         if (currentTarget == null)
@@ -15,6 +16,10 @@ public class EnemyMovementScript : MonoBehaviour {
         }
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, currentTarget.position, step);
+        Vector3 vectorToTarget = currentTarget.position - transform.position;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -23,7 +28,6 @@ public class EnemyMovementScript : MonoBehaviour {
         {
             StartCoroutine(ChangeDirection());
         }
-
     }
 
     IEnumerator ChangeDirection()
