@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyMovementScript : MonoBehaviour {
 
-    public Transform targetA;
-    public Transform targetB;
+    public List<Transform> targets;
     public Transform currentTarget;
     public float speed;
     public float rotationSpeed;
@@ -12,8 +12,9 @@ public class EnemyMovementScript : MonoBehaviour {
     {
         if (currentTarget == null)
         {
-            currentTarget = targetA;
+            currentTarget = targets[0];
         }
+ 
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, currentTarget.position, step);
         Vector3 vectorToTarget = currentTarget.position - transform.position;
@@ -32,10 +33,24 @@ public class EnemyMovementScript : MonoBehaviour {
 
     IEnumerator ChangeDirection()
     {
+        Debug.Log("atejau");
         float tempSpeedNote = speed;
         speed = 0;
         yield return new WaitForSeconds(3);
         speed = tempSpeedNote;
-        currentTarget = currentTarget == targetA ? targetB : targetA;
+        Debug.Log(speed);
+        Debug.Log("atejau 2 ");
+        int currentIndex = targets.IndexOf(currentTarget);
+        if (targets.Count - 1 == currentIndex)
+        {
+            currentTarget = targets[0];
+        } else
+        {
+            Debug.Log(targets.Count);
+            Debug.Log(currentIndex);
+            currentIndex++;
+            currentTarget = targets[currentIndex];
+        }
+       
     }
 }
