@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Ground
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -48,4 +49,7 @@ TagManager:
     locked: 0
   - name: VisionScope
     uniqueID: 1775273909
+    locked: 0
+  - name: Pickups
+    uniqueID: 118211253
     locked: 0
