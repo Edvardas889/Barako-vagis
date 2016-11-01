@@ -21,8 +21,17 @@ public class EnemyMovementScript : MonoBehaviour {
     {
         if (coll.gameObject.tag != "Player")
         {
-            currentTarget = currentTarget == targetA ? targetB : targetA;
+            StartCoroutine(ChangeDirection());
         }
 
+    }
+
+    IEnumerator ChangeDirection()
+    {
+        float tempSpeedNote = speed;
+        speed = 0;
+        yield return new WaitForSeconds(3);
+        speed = tempSpeedNote;
+        currentTarget = currentTarget == targetA ? targetB : targetA;
     }
 }
