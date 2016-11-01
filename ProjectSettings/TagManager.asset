@@ -47,6 +47,9 @@ TagManager:
   - name: Wall
     uniqueID: 3646349667
     locked: 0
+  - name: MovingObject
+    uniqueID: 3280239563
+    locked: 0
   - name: VisionScope
     uniqueID: 1775273909
     locked: 0
