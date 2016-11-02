@@ -1,30 +1,39 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System;
 
 public class TimeManager : MonoBehaviour {
 
     public float startingTime;
     public GameObject gameOverText;
+    public GameObject helpText;
+    public GameObject playerToDisable;
 
     private Text theText;
+    private bool beingHandled = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         theText = GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	 void Update () {
+
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene("mapas");
+        
 
         if (startingTime >= 0)
         {
             if(Mathf.Round(startingTime) == 0)
             {
                 gameOverText.SetActive(true);
-                SceneManager.LoadScene("mapas");
-                
+                helpText.SetActive(true);
+                playerToDisable.SetActive(false);
             }
                 
             startingTime -= Time.deltaTime;
