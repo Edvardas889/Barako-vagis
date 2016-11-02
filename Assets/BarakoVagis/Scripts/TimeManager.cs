@@ -17,8 +17,11 @@ public class TimeManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        startingTime -= Time.deltaTime;
+        if (startingTime >= 0)
+        {
+            startingTime -= Time.deltaTime;
 
-        theText.text = "" + Mathf.Round (startingTime) + " sec";
+            theText.text = "" + Mathf.Round(startingTime) + " sec";
+        }
 	}
 }
