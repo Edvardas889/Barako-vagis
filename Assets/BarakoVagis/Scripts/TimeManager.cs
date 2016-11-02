@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour {
 
     public float startingTime;
+    public GameObject gameOverText;
 
     private Text theText;
 
@@ -19,9 +20,17 @@ public class TimeManager : MonoBehaviour {
 
         if (startingTime >= 0)
         {
+            if(Mathf.Round(startingTime) == 0)
+            {
+                gameOverText.SetActive(true);
+                SceneManager.LoadScene("mapas");
+                
+            }
+                
             startingTime -= Time.deltaTime;
-
-            theText.text = "" + Mathf.Round(startingTime) + " sec";
+            theText.text = "" + Mathf.Round(startingTime) + " SEC";
         }
-	}
+
+        
+    }
 }
