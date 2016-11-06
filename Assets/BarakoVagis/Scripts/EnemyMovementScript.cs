@@ -33,21 +33,16 @@ public class EnemyMovementScript : MonoBehaviour {
 
     IEnumerator ChangeDirection()
     {
-        Debug.Log("atejau");
         float tempSpeedNote = speed;
         speed = 0;
         yield return new WaitForSeconds(3);
         speed = tempSpeedNote;
-        Debug.Log(speed);
-        Debug.Log("atejau 2 ");
         int currentIndex = targets.IndexOf(currentTarget);
         if (targets.Count - 1 == currentIndex)
         {
             currentTarget = targets[0];
         } else
         {
-            Debug.Log(targets.Count);
-            Debug.Log(currentIndex);
             currentIndex++;
             currentTarget = targets[currentIndex];
         }

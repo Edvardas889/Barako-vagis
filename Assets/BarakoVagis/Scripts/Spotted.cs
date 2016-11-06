@@ -13,6 +13,9 @@ public class Spotted : MonoBehaviour {
             gameOverText.SetActive(true);
             helpText.SetActive(true);
             gameObject.SetActive(false);
+            GameObject timmer = GameObject.Find("timeInSec");
+            TimeManager tm = timmer.GetComponent<TimeManager>();
+            tm.updateOn = false;
         }
     }
 }

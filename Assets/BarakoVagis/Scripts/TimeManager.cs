@@ -10,6 +10,7 @@ public class TimeManager : MonoBehaviour {
     public GameObject gameOverText;
     public GameObject helpText;
     public GameObject playerToDisable;
+    public bool updateOn = true;
 
     private Text theText;
     private bool beingHandled = false;
@@ -25,21 +26,23 @@ public class TimeManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene("mapas");
-        
 
-        if (startingTime >= 0)
+        if (updateOn == true)
         {
-            if(Mathf.Round(startingTime) == 0)
+            
+            if (startingTime >= 0)
             {
-                gameOverText.SetActive(true);
-                helpText.SetActive(true);
-                playerToDisable.SetActive(false);
-            }
-                
-            startingTime -= Time.deltaTime;
-            theText.text = "" + Mathf.Round(startingTime) + " SEC";
-        }
+                if (Mathf.Round(startingTime) == 0)
+                {
+                    gameOverText.SetActive(true);
+                    helpText.SetActive(true);
+                    playerToDisable.SetActive(false);
+                    updateOn = false;
+                }
 
-        
+                startingTime -= Time.deltaTime;
+                theText.text = "" + Mathf.Round(startingTime) + " SEC";
+            }
+        }
     }
 }

@@ -3424,6 +3424,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 70
+--- !u!1 &946952092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 946952093}
+  - 222: {fileID: 946952095}
+  - 114: {fileID: 946952094}
+  m_Layer: 5
+  m_Name: gameWinText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &946952093
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946952092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1566400484}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 72.1, y: -6.5}
+  m_SizeDelta: {x: 496.7, y: 117.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &946952094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946952092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.92068964, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LEVEL COMPLETED!
+--- !u!222 &946952095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946952092}
 --- !u!1 &964634390
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +5059,11 @@ Prefab:
       propertyPath: playerSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010257069658, guid: 1c171cf528c0bac45baf676a221ee3ba,
+        type: 2}
+      propertyPath: gameWinText
+      value: 
+      objectReference: {fileID: 946952092}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c171cf528c0bac45baf676a221ee3ba, type: 2}
   m_IsPrefabParent: 0
@@ -5448,6 +5527,7 @@ RectTransform:
   - {fileID: 1651587978}
   - {fileID: 1706765025}
   - {fileID: 40838707}
+  - {fileID: 946952093}
   m_Father: {fileID: 0}
   m_RootOrder: 102
   m_AnchorMin: {x: 0, y: 0}
@@ -5692,6 +5772,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1706765024}
   helpText: {fileID: 40838706}
   playerToDisable: {fileID: 907676950}
+  updateOn: 1
 --- !u!114 &1651587980
 MonoBehaviour:
   m_ObjectHideFlags: 0
