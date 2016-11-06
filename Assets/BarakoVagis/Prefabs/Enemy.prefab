@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000010374994252}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Spotted
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,9 +39,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010068963474}
   - 212: {fileID: 212000013706730924}
+  - 60: {fileID: 60000010938762270}
   m_Layer: 0
   m_Name: VisionScope
-  m_TagString: Untagged
+  m_TagString: Spotted
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012214571148}
   m_LocalRotation: {x: -0.0024682165, y: -0.0024682165, z: 0.7071025, w: 0.7071025}
-  m_LocalPosition: {x: 0.714, y: -0.004, z: 0}
-  m_LocalScale: {x: 0.3574974, y: 0.56411076, z: 1.0012311}
+  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalScale: {x: 0.35965547, y: 0.5325586, z: 1.0012311}
   m_LocalEulerAnglesHint: {x: 0, y: -0.4, z: 90}
   m_Children: []
   m_Father: {fileID: 4000013899388284}
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011941182580}
   m_LocalRotation: {x: 0, y: 0, z: -0.18926689, w: 0.98192567}
-  m_LocalPosition: {x: 9.78, y: -6.5, z: 0}
+  m_LocalPosition: {x: -24.9, y: -0.1, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.82}
   m_Children:
@@ -104,6 +105,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!60 &60000010938762270
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012214571148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.04, y: 1}
+      - {x: -2, y: -0.96999997}
+      - {x: -2, y: -1}
+      - {x: 2, y: -1}
+      - {x: 2, y: -0.96}
+      - {x: 0.04, y: 1}
 --- !u!114 &114000010374994252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,9 +136,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1805c8bb9afca41843524b2843d048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets: []
+  targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentTarget: {fileID: 0}
-  speed: 5
+  speed: 15
   rotationSpeed: 10
 --- !u!212 &212000012783354746
 SpriteRenderer:

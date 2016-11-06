@@ -35,7 +35,7 @@ public class EnemyMovementScript : MonoBehaviour {
     {
         float tempSpeedNote = speed;
         speed = 0;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         speed = tempSpeedNote;
         int currentIndex = targets.IndexOf(currentTarget);
         if (targets.Count - 1 == currentIndex)
