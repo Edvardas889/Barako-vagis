@@ -25,7 +25,7 @@ public class TimeManager : MonoBehaviour {
 	 void Update () {
 
         if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene("mapas");
+            SceneManager.LoadScene("Level_1");
 
         if (updateOn == true)
         {
