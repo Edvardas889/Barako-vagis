@@ -13,3 +13,7 @@ EditorBuildSettings:
     path: Assets/BarakoVagis/Scenes/Main_Menu.unity
   - enabled: 1
     path: Assets/BarakoVagis/Scenes/Level_1.unity
+  - enabled: 1
+    path: Assets/BarakoVagis/Scenes/Credits.unity
+  - enabled: 1
+    path: Assets/BarakoVagis/Scenes/HowToPlay.unity
