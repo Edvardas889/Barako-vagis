@@ -14,5 +14,5 @@ function OnMouseExit()
 
 function OnMouseDown()
 {
-    
+    Application.Quit();
 }

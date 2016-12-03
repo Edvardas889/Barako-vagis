@@ -27,7 +27,7 @@ public class TimeManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene("Level_1");
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.B))
             SceneManager.LoadScene("Main_Menu");
 
         if (updateOn == true)
