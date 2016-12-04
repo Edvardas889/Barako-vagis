@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Pickup
   - Spotted
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Pickups
     uniqueID: 118211253
+    locked: 0
+  - name: Powerups
+    uniqueID: 2865490265
     locked: 0

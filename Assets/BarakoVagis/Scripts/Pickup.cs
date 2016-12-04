@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Pickup : MonoBehaviour {
-
+public class Pickup : MonoBehaviour
+{
+    public GameObject powerUp;
     GameObject[] gos;
 
     public GameObject gameWinText;
@@ -14,8 +15,7 @@ public class Pickup : MonoBehaviour {
         {
             other.gameObject.SetActive(false);
 
-           gos = GameObject.FindGameObjectsWithTag("Pickup");
-            Debug.Log(gos.Length);
+            gos = GameObject.FindGameObjectsWithTag("Pickup");
             if (gos.Length == 0)
             {
                 gameWinText.SetActive(true);
@@ -25,6 +25,13 @@ public class Pickup : MonoBehaviour {
                 tm.updateOn = false;
 
             }
+        }
+
+        if (other.gameObject.CompareTag("Powerup"))
+        {
+            
+            other.gameObject.SetActive(false);
+            powerUp.SetActive(true);
         }
     }
 }
