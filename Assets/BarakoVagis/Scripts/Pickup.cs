@@ -8,12 +8,17 @@ public class Pickup : MonoBehaviour
     GameObject[] gos;
 
     public GameObject gameWinText;
+	public AudioClip saw;
 
     void OnTriggerEnter2D(Collider2D other)
     {
+		GetComponent<AudioSource> ().playOnAwake = false;
+        GetComponent<AudioSource> ().clip = saw;
+		
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
+			GetComponent<AudioSource> ().Play ();
 
             gos = GameObject.FindGameObjectsWithTag("Pickup");
             if (gos.Length == 0)
