@@ -9,6 +9,8 @@ TagManager:
   - Pickup
   - Spotted
   - Powerup
+  - ClockPowerup
+  - SpeedPowerup
   layers:
   - Default
   - TransparentFX
