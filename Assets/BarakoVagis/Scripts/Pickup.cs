@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
 
     GameObject[] gos;
     public GameObject gameWinText;
-	public AudioClip pickup;
+    public GameObject scoreText;
+    public AudioClip pickup;
     public PowerUpEntry[] powerUps;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,7 +25,9 @@ public class Pickup : MonoBehaviour
             gos = GameObject.FindGameObjectsWithTag("Pickup");
             if (gos.Length == 0)
             {
+                
                 gameWinText.SetActive(true);
+                scoreText.SetActive(true);
                 gameObject.SetActive(false);
                 GameObject timmer = GameObject.Find("timeInSec");
                 TimeManager tm = timmer.GetComponent<TimeManager>();
