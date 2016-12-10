@@ -5,13 +5,13 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour {
 
     GameObject[] gos;
-    GameObject[] pos;
+    public GameObject pu1;
+    public GameObject pu2;
     private Text score;
 
     // Use this for initialization
     void Start () {
         score = GetComponent<Text>();
-        
     }
 	
 	// Update is called once per frame
@@ -22,7 +22,11 @@ public class ScoreManager : MonoBehaviour {
         {
             GameObject timmer = GameObject.Find("timeInSec");
             TimeManager tm = timmer.GetComponent<TimeManager>();
-            score.text = "SCORE: "+Mathf.Round(tm.startingTime*100)+" ";
+            if (pu1.active || pu2.active)
+                score.text = "SCORE: " + Mathf.Round(tm.startingTime * 100 + 1000) + " ";
+            else
+                score.text = "SCORE: " + Mathf.Round(tm.startingTime * 100) + " ";
+
         }
 	
 	}
