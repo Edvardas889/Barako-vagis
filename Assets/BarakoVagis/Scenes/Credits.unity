@@ -415,7 +415,9 @@ MonoBehaviour:
 
     https://wreckageuk.wordpress.com/
 
-    http://www.mayang.com/textures/'
+    http://www.mayang.com/textures/
+
+    https://www.assetstore.unity3d.com/en/#!/content/13213'
 --- !u!222 &716426187
 CanvasRenderer:
   m_ObjectHideFlags: 0
