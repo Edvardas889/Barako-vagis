@@ -18,21 +18,13 @@ public class SpeedPowerupManager : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.P) && !notificationText.active)
         { 
-            StartCoroutine(ShowNotification());
             StartCoroutine(EnableSpeedTemporarily());
         }      
-    }
-	
-    IEnumerator ShowNotification()
-    {
-        notificationText.SetActive(true);
-
-        yield return new WaitForSeconds(2);
-        notificationText.SetActive(false);        
     }
 
     IEnumerator EnableSpeedTemporarily()
     {
+        notificationText.SetActive(true);
         GameObject player = GameObject.Find("Player");
         MovementScript playerMovement = player.GetComponent<MovementScript>();
         playerMovement.playerSpeed += value;
@@ -40,6 +32,7 @@ public class SpeedPowerupManager : MonoBehaviour {
 
         yield return new WaitForSeconds(5);       
         playerMovement.playerSpeed -= value;
-        powerUp.SetActive(false);      
+        notificationText.SetActive(false);
+        powerUp.SetActive(false);              
     }
 }
