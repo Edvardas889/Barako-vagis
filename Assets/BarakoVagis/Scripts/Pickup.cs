@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Pickup : MonoBehaviour
 {
@@ -28,10 +29,12 @@ public class Pickup : MonoBehaviour
                 
                 gameWinText.SetActive(true);
                 scoreText.SetActive(true);
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
                 GameObject timmer = GameObject.Find("timeInSec");
                 TimeManager tm = timmer.GetComponent<TimeManager>();
                 tm.updateOn = false;
+                StartCoroutine(WaitForNewLevel());
+                SceneManager.LoadScene("Level_2");
             }
         }
         if (other.gameObject.tag.Contains("Powerup"))
@@ -48,6 +51,11 @@ public class Pickup : MonoBehaviour
             powerUp.SetActive(true);
 			GetComponent<AudioSource> ().Play ();
         }
+    }
+
+    IEnumerator WaitForNewLevel()
+    {
+        yield return new WaitForSeconds(3);
     }
 
     [System.Serializable]

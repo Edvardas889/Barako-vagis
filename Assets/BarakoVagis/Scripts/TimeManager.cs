@@ -25,8 +25,13 @@ public class TimeManager : MonoBehaviour {
 	 void Update () {
 
         if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene("Level_1");
-
+        {
+            if (Application.loadedLevelName == "Level_1")
+                SceneManager.LoadScene("Level_1");
+            else if(Application.loadedLevelName == "Level_2")
+                SceneManager.LoadScene("Level_2");
+        }
+           
         if (Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("Main_Menu");
 

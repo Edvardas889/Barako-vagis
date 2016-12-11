@@ -3722,6 +3722,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010204697126, guid: 251a7d73035ed974a9100c8d5633954a, type: 2}
+      propertyPath: m_TagString
+      value: ClockPowerup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 251a7d73035ed974a9100c8d5633954a, type: 2}
   m_IsPrefabParent: 0
@@ -4280,7 +4284,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.77
+  m_Radius: 0.5
 --- !u!4 &907676958 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010065800232, guid: 1c171cf528c0bac45baf676a221ee3ba,
@@ -5369,7 +5373,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1273015369}
-  m_RootOrder: 64
+  m_RootOrder: 65
 --- !u!1 &1132132667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5962,8 +5966,8 @@ Transform:
   - {fileID: 2666265}
   - {fileID: 457983437}
   - {fileID: 365950643}
-  - {fileID: 1130982619}
   - {fileID: 1620518033}
+  - {fileID: 1130982619}
   m_Father: {fileID: 179614332}
   m_RootOrder: 2
 --- !u!1001 &1308182305
