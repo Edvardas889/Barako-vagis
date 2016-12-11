@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000013899388284}
   - 50: {fileID: 50000013814805546}
   - 114: {fileID: 114000010374994252}
-  - 60: {fileID: 60000010713203794}
+  - 58: {fileID: 58000013698713568}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Spotted
@@ -39,6 +39,7 @@ GameObject:
   - 4: {fileID: 4000010068963474}
   - 212: {fileID: 212000013706730924}
   - 60: {fileID: 60000010938762270}
+  - 60: {fileID: 60000012606738780}
   m_Layer: 0
   m_Name: VisionScope
   m_TagString: Spotted
@@ -95,8 +96,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011941182580}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -83, y: 23.9, z: 10}
+  m_LocalRotation: {x: -0, y: -0, z: -0.18926689, w: 0.98192567}
+  m_LocalPosition: {x: -29, y: 4.5, z: 10}
   m_LocalScale: {x: 6, y: 6, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -121,8 +122,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60000010713203794
-PolygonCollider2D:
+--- !u!58 &58000013698713568
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -133,20 +134,29 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.39
+--- !u!60 &60000010938762270
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012214571148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.30429587, y: -0.21015613}
-      - {x: -0.123392746, y: -0.43895692}
-      - {x: 0.24052557, y: -0.34424847}
-      - {x: 0.35276031, y: -0.14293194}
-      - {x: 0.486969, y: -0.21940772}
-      - {x: 1.2923783, y: -0.7186915}
-      - {x: 1.2686088, y: 0.7158615}
-      - {x: 0.32591504, y: 0.116112076}
-      - {x: 0.18166988, y: 0.33587965}
-      - {x: -0.053113304, y: 0.41109976}
-      - {x: -0.30913544, y: 0.31824654}
---- !u!60 &60000010938762270
+    - - {x: -0.04, y: 1}
+      - {x: -2, y: -0.96999997}
+      - {x: -2, y: -1}
+      - {x: 2, y: -1}
+      - {x: 2, y: -0.96}
+      - {x: 0.04, y: 1}
+--- !u!60 &60000012606738780
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -229,7 +239,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1014727733
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a039f28254d3d6b4cb5df410ca8d95ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
