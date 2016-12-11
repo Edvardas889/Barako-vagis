@@ -4,10 +4,11 @@ using System.Collections;
 public class MovementScript : MonoBehaviour {
 
     public float playerSpeed = 10; //speed player moves
-   
+
+    
     void Update()
     {
-        MoveForward(); // Player Movement 
+        MoveForward();// Player Movement
     }
 
     void MoveForward()
@@ -15,6 +16,7 @@ public class MovementScript : MonoBehaviour {
         if (Input.GetKey("up"))//Press up arrow key to move forward on the Y AXIS
         {
             transform.Translate(0, playerSpeed * Time.deltaTime, 0);
+           
         }
         if (Input.GetKey("down"))//Press up arrow key to move forward on the Y AXIS
         {
