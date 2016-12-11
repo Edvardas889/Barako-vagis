@@ -52,14 +52,14 @@ TagManager:
   - name: Ground
     uniqueID: 448374541
     locked: 0
+  - name: VisionScope
+    uniqueID: 1775273909
+    locked: 0
   - name: Wall
     uniqueID: 3646349667
     locked: 0
   - name: Furniture
     uniqueID: 1872646253
-    locked: 0
-  - name: VisionScope
-    uniqueID: 1775273909
     locked: 0
   - name: MovingObject
     uniqueID: 3280239563
