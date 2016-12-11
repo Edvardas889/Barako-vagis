@@ -57,7 +57,8 @@ public class Pickup : MonoBehaviour
     IEnumerator WaitForNewLevel()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Level_2");   
+        if (Application.loadedLevelName == "Level_1")
+            SceneManager.LoadScene("Level_2");   
     }
 
     [System.Serializable]
