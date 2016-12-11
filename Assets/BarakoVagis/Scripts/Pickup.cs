@@ -8,6 +8,7 @@ public class Pickup : MonoBehaviour
 
     GameObject[] gos;
     public GameObject gameWinText;
+    public GameObject background;
     public GameObject scoreText;
     public AudioClip pickup;
     public PowerUpEntry[] powerUps;
@@ -25,7 +26,7 @@ public class Pickup : MonoBehaviour
             gos = GameObject.FindGameObjectsWithTag("Pickup");
             if (gos.Length == 0)
             {
-                
+                background.GetComponent<AudioSource>().Stop();
                 gameWinText.SetActive(true);
                 scoreText.SetActive(true);
                 gameObject.SetActive(false);
