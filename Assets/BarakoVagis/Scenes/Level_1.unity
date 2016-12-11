@@ -4674,7 +4674,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.77
+  m_Radius: 0.63
 --- !u!4 &907676958 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010065800232, guid: 1c171cf528c0bac45baf676a221ee3ba,
@@ -8612,7 +8612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d73b9f1d8120346853e17b23f70e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 3000
+  startingTime: 30
   gameOverText: {fileID: 1706765024}
   helpText: {fileID: 40838706}
   playerToDisable: {fileID: 907676950}
@@ -9025,6 +9025,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1706765024}
+--- !u!1 &1750002892 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012214571148, guid: 18e763a85189260448d2da620a06e26b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1937660641}
+--- !u!60 &1750002894
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750002892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.04, y: 1}
+      - {x: -2, y: -0.96999997}
+      - {x: -2, y: -1}
+      - {x: 2, y: -1}
+      - {x: 2, y: -0.96}
+      - {x: 0.04, y: 1}
 --- !u!1001 &1771187810
 Prefab:
   m_ObjectHideFlags: 0
