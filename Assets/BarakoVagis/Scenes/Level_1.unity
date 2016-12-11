@@ -4697,6 +4697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 40
   gameOverText: {fileID: 1706765024}
+  background: {fileID: 130733346}
   helpText: {fileID: 40838706}
   playerToDisable: {fileID: 907676950}
   updateOn: 1

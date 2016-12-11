@@ -8,6 +8,7 @@ public class TimeManager : MonoBehaviour {
 
     public float startingTime;
     public GameObject gameOverText;
+    public GameObject background;
     public GameObject helpText;
     public GameObject playerToDisable;
     public bool updateOn = true;
@@ -42,6 +43,7 @@ public class TimeManager : MonoBehaviour {
             {
                 if (Mathf.Round(startingTime) == 0)
                 {
+                    background.GetComponent<AudioSource>().Stop();
                     gameOverText.SetActive(true);
                     helpText.SetActive(true);
                     playerToDisable.SetActive(false);
