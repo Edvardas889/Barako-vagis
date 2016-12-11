@@ -8,6 +8,15 @@ public class EnemyMovementScript : MonoBehaviour {
     public Transform currentTarget;
     public float speed;
     public float rotationSpeed;
+    Animator anim;
+
+    // Use this for initialization
+    void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+
+    }
+
     void Update()
     {
         if (currentTarget == null)
@@ -35,8 +44,10 @@ public class EnemyMovementScript : MonoBehaviour {
     {
         float tempSpeedNote = speed;
         speed = 0;
+        anim.SetInteger("State", 0);
         yield return new WaitForSeconds(1);
         speed = tempSpeedNote;
+        anim.SetInteger("State", 1);
         int currentIndex = targets.IndexOf(currentTarget);
         if (targets.Count - 1 == currentIndex)
         {
