@@ -30,12 +30,12 @@ public class Pickup : MonoBehaviour
                 background.GetComponent<AudioSource>().Stop();
                 gameWinText.SetActive(true);
                 scoreText.SetActive(true);
-                //gameObject.SetActive(false);
+                MovementScript playerMovement = gameObject.GetComponent<MovementScript>();
+                playerMovement.playerSpeed = 0;
                 GameObject timmer = GameObject.Find("timeInSec");
                 TimeManager tm = timmer.GetComponent<TimeManager>();
                 tm.updateOn = false;
-                StartCoroutine(WaitForNewLevel());
-                SceneManager.LoadScene("Level_2");
+                StartCoroutine(WaitForNewLevel());                
             }
         }
         if (other.gameObject.tag.Contains("Powerup"))
@@ -57,6 +57,7 @@ public class Pickup : MonoBehaviour
     IEnumerator WaitForNewLevel()
     {
         yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Level_2");   
     }
 
     [System.Serializable]
