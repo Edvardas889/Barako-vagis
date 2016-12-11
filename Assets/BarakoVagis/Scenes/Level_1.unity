@@ -7037,7 +7037,7 @@ Prefab:
     - target: {fileID: 114000013351964222, guid: 1c171cf528c0bac45baf676a221ee3ba,
         type: 2}
       propertyPath: playerSpeed
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114000010257069658, guid: 1c171cf528c0bac45baf676a221ee3ba,
         type: 2}
@@ -7091,7 +7091,7 @@ Prefab:
     - target: {fileID: 58000013196138838, guid: 1c171cf528c0bac45baf676a221ee3ba,
         type: 2}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c171cf528c0bac45baf676a221ee3ba, type: 2}
