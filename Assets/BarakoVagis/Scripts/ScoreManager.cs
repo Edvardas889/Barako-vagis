@@ -23,9 +23,9 @@ public class ScoreManager : MonoBehaviour {
             GameObject timmer = GameObject.Find("timeInSec");
             TimeManager tm = timmer.GetComponent<TimeManager>();
             if (pu1.active || pu2.active)
-                score.text = "SCORE: " + Mathf.Round(tm.startingTime * 100 + 1000) + " ";
+                score.text = Mathf.Round(tm.startingTime * 100 + 1000) + " ";
             else
-                score.text = "SCORE: " + Mathf.Round(tm.startingTime * 100) + " ";
+                score.text = Mathf.Round(tm.startingTime * 100) + " ";
 
         }
 	

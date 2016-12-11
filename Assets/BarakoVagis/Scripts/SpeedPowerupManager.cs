@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpeedPowerupManager : MonoBehaviour {
 
     public GameObject notificationText;
     public GameObject powerUp;
 	public AudioClip powerUpSound;
+    
 	public float value = 5;
 	
 	 // Use this for initialization
@@ -25,6 +27,7 @@ public class SpeedPowerupManager : MonoBehaviour {
     IEnumerator EnableSpeedTemporarily()
     {
         notificationText.SetActive(true);
+        this.gameObject.GetComponent<Image>().enabled = false;
         GameObject player = GameObject.Find("Player");
         MovementScript playerMovement = player.GetComponent<MovementScript>();
         playerMovement.playerSpeed += value;
