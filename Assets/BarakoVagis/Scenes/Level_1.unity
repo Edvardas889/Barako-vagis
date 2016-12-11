@@ -2791,25 +2791,6 @@ Prefab:
       propertyPath: m_Name
       value: SecurityCamera (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011096056046, guid: 7f12faf6d10640044be8512aa9c1d534, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012357518834, guid: 7f12faf6d10640044be8512aa9c1d534,
-        type: 2}
-      propertyPath: rotationZStart
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012357518834, guid: 7f12faf6d10640044be8512aa9c1d534,
-        type: 2}
-      propertyPath: rotationZEnd
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012357518834, guid: 7f12faf6d10640044be8512aa9c1d534,
-        type: 2}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f12faf6d10640044be8512aa9c1d534, type: 2}
   m_IsPrefabParent: 0
@@ -7185,11 +7166,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010065800232, guid: 1c171cf528c0bac45baf676a221ee3ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 61.14
+      value: 62.17
       objectReference: {fileID: 0}
     - target: {fileID: 4000010065800232, guid: 1c171cf528c0bac45baf676a221ee3ba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 21.48
+      value: 23.17
       objectReference: {fileID: 0}
     - target: {fileID: 4000010065800232, guid: 1c171cf528c0bac45baf676a221ee3ba, type: 2}
       propertyPath: m_LocalPosition.z
